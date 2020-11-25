@@ -7,10 +7,16 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { HomeComponent } from './home/home.component';
+import { CoursesComponent } from './courses/courses.component';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    CoursesComponent
   ],
   imports: [
     BrowserModule,
