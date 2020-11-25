@@ -1,15 +1,33 @@
-<ul>
+
+<!-- get data from firebase using pipe keyalue-->
+<!-- <ul>
   <li *ngFor="let course of courses | keyvalue">
     {{course.value}}
   </li>
-</ul>
-<br>
+</ul> -->
+
+<!-- get data from firebase without using pipe keyalue-->
 <!-- <ul>
   <li *ngFor="let course of courses">
     {{course}}
   </li>
 </ul> -->
 
+<!-- get data from firebase using pipe keyalue and using unsubscribe-->
+<!-- <button (click)="ngOnDestroy()">Offline</button>
+<ul>
+  <li *ngFor="let course of courses | keyvalue">
+    {{course.value}}
+  </li>
+</ul> -->
+
+<!-- get data from firebase without using pipe keyalue and using unsubscribe-->
+<!-- <button (click)="ngOnDestroy()">Offline</button>
+<ul>
+  <li *ngFor="let course of courses">
+    {{course}}
+  </li>
+</ul> -->
 
 
 <router-outlet></router-outlet>

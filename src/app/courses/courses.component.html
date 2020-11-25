@@ -1,0 +1,6 @@
+<button *ngIf="isOut" (click)="Out()">Out</button>
+<ul *ngIf="isOut">
+  <li *ngFor="let course of courses$ | async">
+    {{course}}
+  </li>
+</ul>
