@@ -21,6 +21,8 @@
   </li>
 </ul> -->
 
+
+
 <!-- get data from firebase without using pipe keyalue and using unsubscribe-->
 <!-- <button (click)="ngOnDestroy()">Offline</button>
 <ul>
@@ -31,11 +33,30 @@
 
 <!-- read one object from firebase-->
 
-<!-- <p>{{ course$ | async | json }}</p>
+<!-- 
+<p>{{ course$ | async | json }}</p>
 
-<p>{{ author$ | async | json }}</p> -->
+<p>{{ author$ | async | json }}</p>
+ -->
 
 
+
+
+<!-- get data of complex object from firebase without using 'as' keyword-->
+
+<!-- <ul>
+  <li>{{ (author$ | async)?.name }}</li>
+  <li>{{ (author$ | async)?.students }}</li>
+  <li>{{ (author$ | async)?.isPremium }}</li>
+</ul> -->
+
+<!-- get data of complex object from firebase using 'as' keyword-->
+
+<!-- <ul *ngIf="author$ | async as author">
+  <li>{{ author.name }}</li>
+  <li>{{ author.students }}</li>
+  <li>{{ author.isPremium }}</li>
+</ul> -->
 
 
 <router-outlet></router-outlet>

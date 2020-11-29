@@ -47,4 +47,11 @@ export class AppComponent {
   //   this.author$ = db.object('/authors/1').valueChanges();
   // }
 
+  /************** using as keyword************/
+  // author$;
+  
+  // constructor(db: AngularFireDatabase){
+  //   this.author$ = db.object('/authors/1').valueChanges();
+  // }
+
 }
