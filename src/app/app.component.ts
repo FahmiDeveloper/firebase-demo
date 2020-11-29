@@ -37,4 +37,14 @@ export class AppComponent {
   // }
 
 
+
+/************** read one object from firebase************/
+  // course$;
+  // author$;
+  
+  // constructor(db: AngularFireDatabase){
+  //   this.course$ = db.object('/courses/1').valueChanges();
+  //   this.author$ = db.object('/authors/1').valueChanges();
+  // }
+
 }
