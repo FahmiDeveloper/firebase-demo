@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -52,6 +53,40 @@ export class AppComponent {
   
   // constructor(db: AngularFireDatabase){
   //   this.author$ = db.object('/authors/1').valueChanges();
+  // }
+
+
+
+
+
+
+ /************** add an object to firebase************/
+  courses$;
+  complewobject: boolean;
+
+  constructor(public db: AngularFireDatabase){
+    this.courses$ = db.list('/courses').valueChanges();
+  }
+
+   /************** add simple key object ************/
+  // add(course:HTMLInputElement){
+  //   this.db.list('/courses').push(course.value);
+  //   course.value = '';
+  // }
+
+   /************** add complex object ************/
+  //  add(course:HTMLInputElement){
+  //   this.db.list('/courses').push({
+  //     name: course.value,
+  //     price: 150,
+  //     isLive: true,
+  //     sections: [
+  //       {title: 'components'},
+  //       {title: 'directives'},
+  //       {title: 'templates'}
+  //     ]
+  //   });
+  //   course.value = '';
   // }
 
 }
