@@ -58,13 +58,15 @@
   <li>{{ author.isPremium }}</li>
 </ul> -->
 
- <input type="text" (keyup.enter)="add(course)" #course>
-  <!--#course:template variable and reference for input element -->
+ 
+<!-- add object to firebase-->
+<!--#course:template variable and reference for input element -->
+<!-- <input type="text" (keyup.enter)="add(course)" #course> 
 <ul>
   <li *ngFor="let course of courses$ | async">
     {{course.name || course}}
   </li>
-</ul>
+</ul> -->
 
 
 <router-outlet></router-outlet>

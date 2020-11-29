@@ -75,18 +75,18 @@ export class AppComponent {
   // }
 
    /************** add complex object ************/
-   add(course:HTMLInputElement){
-    this.db.list('/courses').push({
-      name: course.value,
-      price: 150,
-      isLive: true,
-      sections: [
-        {title: 'components'},
-        {title: 'directives'},
-        {title: 'templates'}
-      ]
-    });
-    course.value = '';
-  }
+  //  add(course:HTMLInputElement){
+  //   this.db.list('/courses').push({
+  //     name: course.value,
+  //     price: 150,
+  //     isLive: true,
+  //     sections: [
+  //       {title: 'components'},
+  //       {title: 'directives'},
+  //       {title: 'templates'}
+  //     ]
+  //   });
+  //   course.value = '';
+  // }
 
 }
