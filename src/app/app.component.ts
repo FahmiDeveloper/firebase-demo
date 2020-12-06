@@ -64,7 +64,7 @@ export class AppComponent {
   courses$;
   complewobject: boolean;
 
-  constructor(public db: AngularFireDatabase){
+  constructor(private db: AngularFireDatabase){
     this.courses$ = db.list('/courses').valueChanges();
   }
 
@@ -89,4 +89,22 @@ export class AppComponent {
   //   course.value = '';
   // }
 
+
+     /************** update object ************/
+  // update(course){
+    // this.db.object('/courses/' + course.key).set(course.value + 'UPDATED');//update using simple value
+
+  
+  // update using compolex object
+  //   this.db.object('/courses/' + course.key)
+  //   .set({
+  //     title: course.value + 'UPDATED',
+  //     price:150
+  //   });
+  // }
+
+   /************** delete object ************/
+  delete(course){
+    this.db.object('/courses/' + course.key).remove();
+  }
 }
